@@ -12,7 +12,7 @@ public class ChargingStation
 
     public decimal CalculatePrice(Vehicle vehicle)
     {
-        return vehicle.BatteryKwh * (100 - vehicle.Percent) / 100 * PricePerKwh;
+        return vehicle.BatteryKwh * (100 - vehicle.Percent) / 100 * PricePerKwh * 0.9m; // 10 % rabatt
     }
 
     public decimal Charge(Vehicle vehicle)
