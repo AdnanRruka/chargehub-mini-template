@@ -5,6 +5,8 @@ queue.Add(new Vehicle { Id = 1, BatteryKwh = 82, Percent = 10 });
 queue.Add(new Vehicle { Id = 2, BatteryKwh = 75, Percent = 20 });
 queue.Add(new Vehicle { Id = 3, BatteryKwh = 60, Percent = 50 });
 
+Console.WriteLine($"DEBUG: kön har {queue.Count} bilar");
+Console.WriteLine($"DEBUG: station {station.Id} har pris {station.PricePerKwh}");
 Console.WriteLine($"{queue.Count} bilar i kön");
 decimal total = queue.ProcessAll(station);
 Console.WriteLine($"Totalt: {total:F2} kr");
